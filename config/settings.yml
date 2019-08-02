@@ -1,0 +1,3 @@
+plugins:
+  lucky_cat_onebox_enable:
+    default: true
