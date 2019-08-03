@@ -4,7 +4,7 @@
 # authors: Erick Guan
 
 
-enabled_site_setting :lucky_cat_onebox
+enabled_site_setting :lucky_cat_onebox_enable
 
 require 'active_support/inflector'
 require "ostruct"
@@ -17,7 +17,7 @@ Dir[File.expand_path('../lib/onebox_override/*.rb', __FILE__)].each { |f| requir
 register_asset "stylesheets/buttons.scss"
 
 after_initialize do
-  next unless SiteSetting.lucky_cat_onebox
+  next unless SiteSetting.lucky_cat_onebox_enable
 
   Dir[File.expand_path('../lib/onebox/*.rb', __FILE__)].each { |f| require f }
 end
